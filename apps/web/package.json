@@ -1,0 +1,44 @@
+{
+  "ct3aMetadata": {
+    "initVersion": "7.38.1"
+  },
+  "dependencies": {
+    "@hackyard/ui": "workspace:*",
+    "@t3-oss/env-nextjs": "^0.13.8",
+    "arktype": "^2.1.22",
+    "lucide-react": "^0.544.0",
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "server-only": "^0.0.1",
+    "sonner": "^2.0.7",
+    "usehooks-ts": "^3.1.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.5",
+    "@hackyard/config": "workspace:*",
+    "@tailwindcss/postcss": "4.1.14",
+    "@types/node": "^24.6.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-load-config": "^6.0.1",
+    "tailwindcss": "4.1.14",
+    "typescript": "^5.9.3"
+  },
+  "name": "web-next",
+  "packageManager": "pnpm@9.4.0",
+  "private": true,
+  "scripts": {
+    "build": "next build --turbo",
+    "check": "pnpm format && tsc --noEmit",
+    "dev": "next dev --turbo",
+    "preview": "next build && next start",
+    "start": "next start",
+    "typecheck": "tsc --noEmit"
+  },
+  "type": "module",
+  "version": "0.1.0"
+}
