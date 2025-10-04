@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 import type { ReactNode } from "react";
 
-const geist = Geist({
+const jakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  variable: "--font-geist",
+  variable: "--font-sans",
 });
 
 import "@hackyard/ui/globals.css";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
-    <html className={`${geist.variable} antialiased`} lang="en">
+    <html className={`${jakartaSans.variable} antialiased`} lang="en">
       <body>{children}</body>
     </html>
   );
