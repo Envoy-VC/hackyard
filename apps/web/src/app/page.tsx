@@ -1,4 +1,5 @@
 import { Button } from "@hackyard/ui/components/button";
+import { HackYardLogo } from "@hackyard/ui/icons";
 
 import { ThemToggle } from "@/components";
 
@@ -32,6 +33,10 @@ const Home = () => {
       <div className="bg-muted p-4 font-medium text-muted-foreground shadow-2xl">
         This is Muted text foreground on Muted Background
       </div>
+      <HackYardLogo className="size-8" variant="primary" />
+      <HackYardLogo className="size-8" variant="white" />
+      <HackYardLogo className="size-8" variant="black" />
+
       <ThemToggle />
     </div>
   );
