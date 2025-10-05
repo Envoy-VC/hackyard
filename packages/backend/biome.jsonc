@@ -1,0 +1,27 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
+  "extends": "//",
+  "files": {
+    "includes": ["**", "!api/index.ts"]
+  },
+  "overrides": [
+    {
+      // Needed for Config default export
+      "includes": [
+        "**/*.d.ts",
+        "*.config.ts",
+        "*.config.js",
+        "*.config.mjs",
+        "*.config.cjs"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
+          }
+        }
+      }
+    }
+  ],
+  "root": false
+}

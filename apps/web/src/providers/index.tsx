@@ -1,3 +1,4 @@
+import { ConvexClientProvider } from "./convex";
 import { ThemeProvider } from "./theme-provider";
 
 export const ProviderTree = ({ children }: { children: React.ReactNode }) => {
@@ -8,7 +9,7 @@ export const ProviderTree = ({ children }: { children: React.ReactNode }) => {
       disableTransitionOnChange={true}
       enableSystem={true}
     >
-      {children}
+      <ConvexClientProvider>{children}</ConvexClientProvider>
     </ThemeProvider>
   );
 };

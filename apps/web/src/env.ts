@@ -2,9 +2,13 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { type } from "arktype";
 
 export const env = createEnv({
-  client: {},
+  client: {
+    NEXT_PUBLIC_CONVEX_URL: type("string"),
+  },
   emptyStringAsUndefined: true,
-  experimental__runtimeEnv: process.env,
+  experimental__runtimeEnv: {
+    NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
+  },
   server: {
     NODE_ENV: type("'development'|'test'|'production'"),
   },

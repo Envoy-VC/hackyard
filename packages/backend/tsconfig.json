@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "lib": ["ES2021", "dom"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "paths": {
+      "~/*": ["./src/*"]
+    },
+    "strictNullChecks": true,
+    "target": "ESNext"
+  },
+  "exclude": ["node_modules", "src/_generated"],
+  "extends": "@hackyard/config/tsconfig/library/base",
+  "include": ["**/*.ts", "**/*.tsx"]
+}
