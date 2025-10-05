@@ -39,10 +39,10 @@ export const tables = {
     .index("token", ["token"])
     .index("userId", ["userId"]),
   user: defineTable({
-    bio: v.optional(v.union(v.null(), v.string())),
     createdAt: v.number(),
     email: v.string(),
     emailVerified: v.boolean(),
+    hasCompletedOnboarding: v.boolean(),
     image: v.optional(v.union(v.null(), v.string())),
     name: v.string(),
     updatedAt: v.number(),
@@ -64,5 +64,4 @@ export const tables = {
 
 const schema = defineSchema(tables);
 
-// biome-ignore lint/style/noDefaultExport: needed for Convex
 export default schema;

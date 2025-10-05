@@ -12,7 +12,8 @@
         "*.config.ts",
         "*.config.js",
         "*.config.mjs",
-        "*.config.cjs"
+        "*.config.cjs",
+        "src/**/schema.ts"
       ],
       "linter": {
         "rules": {

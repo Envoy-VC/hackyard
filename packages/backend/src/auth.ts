@@ -9,10 +9,10 @@ import { query } from "./_generated/server";
 import authSchema from "./betterAuth/schema";
 
 const additionalFields: Record<string, FieldAttribute> = {
-  bio: {
-    defaultValue: "this is a bio",
-    required: false,
-    type: "string",
+  hasCompletedOnboarding: {
+    defaultValue: false,
+    required: true,
+    type: "boolean",
   },
 };
 
