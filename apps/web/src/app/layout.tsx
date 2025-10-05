@@ -20,7 +20,11 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
   return (
-    <html className={`${jakartaSans.variable} antialiased`} lang="en">
+    <html
+      className={`${jakartaSans.variable} antialiased`}
+      lang="en"
+      suppressHydrationWarning={true}
+    >
       <body>
         <ProviderTree>{children}</ProviderTree>
       </body>

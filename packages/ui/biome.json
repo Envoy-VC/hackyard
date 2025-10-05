@@ -1,5 +1,17 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
   "extends": "//",
+  "overrides": [
+    {
+      "includes": ["./src/icons/**/*.tsx"],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "useUniqueElementIds": "off"
+          }
+        }
+      }
+    }
+  ],
   "root": false
 }

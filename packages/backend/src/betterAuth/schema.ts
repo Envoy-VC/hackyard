@@ -39,6 +39,7 @@ export const tables = {
     .index("token", ["token"])
     .index("userId", ["userId"]),
   user: defineTable({
+    bio: v.optional(v.union(v.null(), v.string())),
     createdAt: v.number(),
     email: v.string(),
     emailVerified: v.boolean(),

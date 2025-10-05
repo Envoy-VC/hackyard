@@ -155,3 +155,15 @@
   animation: none;
   mix-blend-mode: normal;
 }
+
+.text-heading {
+  @apply font-extrabold text-2xl text-gray-800 sm:text-3xl md:text-4xl dark:text-gray-200;
+}
+
+.text-paragraph {
+  @apply text-sm sm:text-base md:text-lg;
+}
+
+.text-label {
+  @apply font-semibold text-gray-800 text-sm dark:text-gray-200;
+}

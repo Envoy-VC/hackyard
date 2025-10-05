@@ -1,11 +1,20 @@
 import { createClient, type GenericCtx } from "@convex-dev/better-auth";
 import { convex } from "@convex-dev/better-auth/plugins";
 import { betterAuth } from "better-auth";
+import type { FieldAttribute } from "better-auth/db";
 
 import { components } from "./_generated/api";
 import type { DataModel } from "./_generated/dataModel";
 import { query } from "./_generated/server";
 import authSchema from "./betterAuth/schema";
+
+const additionalFields: Record<string, FieldAttribute> = {
+  bio: {
+    defaultValue: "this is a bio",
+    required: false,
+    type: "string",
+  },
+};
 
 const siteUrl = process.env.SITE_URL as string;
 
@@ -23,6 +32,11 @@ export const createAuth = (
   { optionsOnly } = { optionsOnly: false },
 ) => {
   return betterAuth({
+    account: {
+      accountLinking: {
+        enabled: true,
+      },
+    },
     baseURL: siteUrl,
     database: authComponent.adapter(ctx),
     logger: {
@@ -38,6 +52,9 @@ export const createAuth = (
         clientId: process.env.GOOGLE_CLIENT_ID as string,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
       },
+    },
+    user: {
+      additionalFields,
     },
   });
 };

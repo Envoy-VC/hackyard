@@ -55,10 +55,7 @@ export const ThemToggle = ({ className }: Props) => {
   return (
     <button
       className={cn(
-        "size-8 rounded-full transition-all duration-300 active:scale-95",
-        isDark
-          ? "bg-background text-foreground"
-          : "bg-foreground text-background",
+        "size-8 rounded-full bg-foreground text-background transition-all duration-300 active:scale-95 dark:bg-background dark:text-foreground",
         className,
       )}
       onClick={toggleTheme}

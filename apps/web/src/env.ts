@@ -3,10 +3,12 @@ import { type } from "arktype";
 
 export const env = createEnv({
   client: {
+    NEXT_PUBLIC_CONVEX_SITE_URL: type("string"),
     NEXT_PUBLIC_CONVEX_URL: type("string"),
   },
   emptyStringAsUndefined: true,
   experimental__runtimeEnv: {
+    NEXT_PUBLIC_CONVEX_SITE_URL: process.env.NEXT_PUBLIC_CONVEX_SITE_URL,
     NEXT_PUBLIC_CONVEX_URL: process.env.NEXT_PUBLIC_CONVEX_URL,
   },
   server: {
