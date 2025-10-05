@@ -145,4 +145,16 @@
 
   --color-white: #ffffff;
   --color-black: #000000;
+
+  /** Transparent */
+  --color-transparent-white-16: rgba(255 255 255 / 0.16);
+  --color-transparent-white-32: rgba(255 255 255 / 0.32);
+  --color-transparent-white-48: rgba(255 255 255 / 0.48);
+  --color-transparent-white-64: rgba(255 255 255 / 0.64);
+  --color-transparent-white-80: rgba(255 255 255 / 0.8);
+  --color-transparent-black-16: rgba(2 6 23 / 0.16);
+  --color-transparent-black-32: rgba(2 6 23 / 0.32);
+  --color-transparent-black-48: rgba(2 6 23 / 0.48);
+  --color-transparent-black-64: rgba(2 6 23 / 0.64);
+  --color-transparent-black-80: rgba(2 6 23 / 0.8);
 }

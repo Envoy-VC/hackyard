@@ -73,6 +73,7 @@
       "correctness": {
         "noConstantMathMinMaxClamp": "error",
         "noUndeclaredDependencies": "error",
+        "noUnknownTypeSelector": "off",
         "noUnusedImports": "error",
         "useHookAtTopLevel": "error"
       },
