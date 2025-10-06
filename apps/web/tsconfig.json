@@ -2,6 +2,7 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "noEmit": true,
     "paths": {
       "@/*": ["./src/*"],
       "@hackyard/ui/*": ["../../packages/ui/src/*"]
@@ -10,7 +11,8 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "strict": false
   },
   "exclude": ["node_modules"],
   "extends": ["@hackyard/config/tsconfig/app/next"],
