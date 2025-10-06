@@ -20,7 +20,6 @@
   "license": "MIT",
   "name": "@hackyard/backend",
   "scripts": {
-    "build": "pnpm setup",
     "dev": "convex dev",
     "generate-schema": "cd src/betterAuth && pnpm @better-auth/cli generate -y",
     "setup": "convex dev --until-success"
