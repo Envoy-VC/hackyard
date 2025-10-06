@@ -1,0 +1,21 @@
+{
+  "author": "",
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10"
+  },
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "2.2.4",
+    "@hackyard/config": "workspace:*",
+    "@types/node": "^22",
+    "typescript": "^5.9.3"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "name": "@hackyard/data",
+  "scripts": {},
+  "version": "0.0.1"
+}

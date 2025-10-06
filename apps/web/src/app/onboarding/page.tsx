@@ -10,6 +10,7 @@ import { OnboardingForm } from "./components";
 // import { fetchQuery } from "convex/nextjs";
 
 // import { getToken } from "@/lib/auth/server";
+import { assets } from "@hackyard/data";
 
 const OnboardingPage = () => {
   // const token = await getToken();
@@ -38,7 +39,7 @@ const OnboardingPage = () => {
           alt="onboarding"
           className="h-[20dvh] w-full object-fill sm:h-[30dvh] lg:h-full"
           height={300}
-          src="/assets/onboarding.png"
+          src={assets.onboardingImage}
           width={300}
         />
       </div>

@@ -27,7 +27,7 @@ importers:
         specifier: ^2.5.8
         version: 2.5.8
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   apps/web:
@@ -38,6 +38,9 @@ importers:
       '@hackyard/backend':
         specifier: workspace:*
         version: link:../../packages/backend
+      '@hackyard/data':
+        specifier: workspace:*
+        version: link:../../packages/data
       '@hackyard/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -130,7 +133,7 @@ importers:
         specifier: 4.1.14
         version: 4.1.14
       typescript:
-        specifier: ^5.7.3
+        specifier: ^5.9.3
         version: 5.9.3
 
   packages/backend:
@@ -175,6 +178,25 @@ importers:
       '@biomejs/biome':
         specifier: 2.2.5
         version: 2.2.5
+
+  packages/data:
+    dependencies:
+      '@phosphor-icons/react':
+        specifier: ^2.1.10
+        version: 2.1.10(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+    devDependencies:
+      '@biomejs/biome':
+        specifier: 2.2.4
+        version: 2.2.4
+      '@hackyard/config':
+        specifier: workspace:*
+        version: link:../config
+      '@types/node':
+        specifier: ^22
+        version: 22.18.8
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/ui:
     dependencies:

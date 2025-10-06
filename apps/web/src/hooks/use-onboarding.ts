@@ -1,8 +1,8 @@
 import { useMemo } from "react";
 
+import { onboardingQuestions } from "@hackyard/data";
 import { useFormContext } from "react-hook-form";
 
-import { onboardingQuestions } from "@/data";
 import type { OnboardingFormType } from "@/lib/schema";
 import { useOnboardingStore } from "@/lib/stores";
 

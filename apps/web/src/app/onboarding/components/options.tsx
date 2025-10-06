@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 
+import { onboardingQuestions } from "@hackyard/data";
 import {
   FormControl,
   FormField,
@@ -22,7 +23,6 @@ import {
 import { useFormContext } from "react-hook-form";
 import { useDebounceValue } from "usehooks-ts";
 
-import { onboardingQuestions } from "@/data";
 import { useOnboarding } from "@/hooks";
 import type { OnboardingFormType } from "@/lib/schema";
 import type { AvailabilityStatus } from "@/lib/stores";
