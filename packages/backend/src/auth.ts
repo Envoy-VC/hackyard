@@ -7,6 +7,7 @@ import { components } from "./_generated/api";
 import type { DataModel } from "./_generated/dataModel";
 import { query } from "./_generated/server";
 import authSchema from "./betterAuth/schema";
+import { env } from "./env";
 
 const additionalFields: Record<string, FieldAttribute> = {
   hasCompletedOnboarding: {
@@ -14,9 +15,14 @@ const additionalFields: Record<string, FieldAttribute> = {
     required: true,
     type: "boolean",
   },
+  plan: {
+    defaultValue: "free",
+    required: true,
+    type: "string",
+  },
 };
 
-const siteUrl = process.env.SITE_URL as string;
+const siteUrl = env.SITE_URL;
 
 export const authComponent = createClient<DataModel, typeof authSchema>(
   components.betterAuth,
@@ -45,12 +51,12 @@ export const createAuth = (
     plugins: [convex()],
     socialProviders: {
       github: {
-        clientId: process.env.GITHUB_CLIENT_ID as string,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET as string,
+        clientId: env.GITHUB_CLIENT_ID,
+        clientSecret: env.GITHUB_CLIENT_SECRET,
       },
       google: {
-        clientId: process.env.GOOGLE_CLIENT_ID as string,
-        clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
+        clientId: env.GOOGLE_CLIENT_ID,
+        clientSecret: env.GOOGLE_CLIENT_SECRET,
       },
     },
     user: {
@@ -63,5 +69,12 @@ export const getCurrentUser = query({
   args: {},
   handler: async (ctx) => {
     return await authComponent.getAuthUser(ctx);
+  },
+});
+
+export const getCurrentUserSafe = query({
+  args: {},
+  handler: async (ctx) => {
+    return await authComponent.safeGetAuthUser(ctx);
   },
 });

@@ -2,6 +2,8 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "declaration": false,
+    "declarationMap": false,
     "lib": ["ES2021", "dom"],
     "module": "ESNext",
     "moduleResolution": "Bundler",

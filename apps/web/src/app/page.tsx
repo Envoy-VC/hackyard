@@ -1,5 +1,9 @@
+"use client";
+
+import { CheckoutLink } from "@convex-dev/polar/react";
+import { api } from "@hackyard/backend/src/_generated/api";
 import { Button } from "@hackyard/ui/components/button";
-import { HackYardLogo } from "@hackyard/ui/icons";
+import { Authenticated } from "convex/react";
 
 import { ThemToggle } from "@/components";
 
@@ -21,7 +25,7 @@ const Home = () => {
       <Button variant="destructive-outline">Destructive Outline</Button>
       <Button variant="destructive-link">Destructive Link</Button> */}
 
-      <Button variant="warning">Warning</Button>
+      {/* <Button variant="warning">Warning</Button>
       <Button variant="warning-ghost">Warning Ghost</Button>
       <Button variant="warning-outline">Warning Outline</Button>
       <Button variant="warning-link">Warning Link</Button>
@@ -35,7 +39,18 @@ const Home = () => {
       </div>
       <HackYardLogo className="size-8" variant="primary" />
       <HackYardLogo className="size-8" variant="white" />
-      <HackYardLogo className="size-8" variant="black" />
+      <HackYardLogo className="size-8" variant="black" /> */}
+      <Authenticated>
+        <Button asChild={true}>
+          <CheckoutLink
+            embed={false}
+            polarApi={api.polar}
+            productIds={["b6cbb1ce-ce8d-402b-94c5-e5c9f1dfa776"]}
+          >
+            Upgrade to Premium
+          </CheckoutLink>
+        </Button>
+      </Authenticated>
 
       <ThemToggle />
     </div>

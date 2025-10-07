@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@convex-dev/better-auth": "^0.8.6",
+    "@convex-dev/polar": "^0.6.4",
     "@hackyard/backend": "workspace:*",
     "@hackyard/data": "workspace:*",
     "@hackyard/ui": "workspace:*",
