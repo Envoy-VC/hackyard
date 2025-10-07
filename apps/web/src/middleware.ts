@@ -13,9 +13,9 @@ const middleware = (request: NextRequest) => {
 
   // If public route, skip auth
   if (isPublicRoute) {
-    // Redirect to "/" if signed in and trying to access a auth route
+    // Redirect to "/dashboard" if signed in and trying to access a auth route
     if (sessionCookie && isSignInRoute) {
-      return NextResponse.redirect(new URL("/", request.url));
+      return NextResponse.redirect(new URL("/dashboard", request.url));
     }
     return NextResponse.next();
   }
