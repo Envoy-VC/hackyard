@@ -15,15 +15,16 @@ polar.registerRoutes(http, {
     await true;
     console.log("Product updated:", event);
   },
-  onSubscriptionCreated: async (ctx, event) => {
+  onSubscriptionCreated: async (_ctx, event) => {
     await Promise.resolve(true);
     const currentPlan = ["active", "trailing"].includes(event.data.status)
       ? "pro"
       : "free";
+    console.log("Current Plan:", currentPlan);
     // TODO: Perform Mutation to update user's plan in DB
   },
   // Optional callbacks for webhook events
-  onSubscriptionUpdated: async (ctx, event) => {
+  onSubscriptionUpdated: async (_ctx, event) => {
     await Promise.resolve(true);
     console.log("Subscription updated:", event);
   },
